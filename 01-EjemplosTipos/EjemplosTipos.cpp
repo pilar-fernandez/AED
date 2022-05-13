@@ -6,7 +6,7 @@ using namespace std::literals;
 int main()
 {
     //Pruebas del tipo de dato int
-	assert(2 == 1+1);
+    assert(2 == 1+1);
     assert(2 == 2);
     assert(2 != 5);
     assert(154 >= 102);
