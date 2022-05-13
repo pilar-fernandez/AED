@@ -1,31 +1,51 @@
 #include <iostream>
 #include <string>
+#include <cassert>
+using namespace std::literals;
 
-int main(){
-    int entero = 10;
-    std::cout << "Ejemplo del tipo de dato int: " << entero << "\n";
+int main()
+{
+    //Pruebas del tipo de dato int
+	assert(2 == 1+1);
+    assert(2 == 2);
+    assert(2 != 5);
+    assert(154 >= 102);
+    assert(2 == 4 / 2);
+    assert(56 == 7 * 8);
+    assert(-6 == 2 * -3);
 
-    long largo = 23984720938402;
-    std::cout << "Ejemplo del tipo de dato long: " << largo << "\n";
+    //Pruebas del tipo de dato char
+    
+    assert('A' != 'B');  
+    assert('B'== 'A' + 1);
+    assert( 'a'!= 'A');
+    assert('A' <= 'B'); //Por código ASCII
 
-    char caracter [5] = "$100";
-    std::cout << "Ejemplo del tipo de dato char: " << caracter << "\n";
+    //Pruebas del tipo de dato unsigned
+    assert(0u == 0u);
+    assert(100 <= 150);
+    assert(5u==3u+2u);
+    assert(99999999 == 99999998 + 1);
 
-    unsigned positivo = 15;
-    std::cout << "Ejemplo del tipo de dato unsigned: " << positivo << "\n";
+    //Pruebas del tipo de dato double
+    assert(4.9 != 3.2 - 1.8);
+    assert(0.0 - 1.0 == -1.0); 
+    assert(0.1 == 1.0/10.0);
+    assert(4.5 == 1.5 * 3.0 );
+    assert(9.8 <= 10.2);
+    assert(5.6 >= 3.2);
 
-    signed negativo = -15;
-    std::cout << "Ejemplo del tipo de dato signed: " << negativo << "\n";
+    //Pruebas del tipo de dato string
+    assert("algoritmos"s == "algo"s + "ritmos"s);
+    assert("1" <= "2");
+    assert("ejercicio"s == "ejercicio"s);
+    assert("AA"s < "AB"s);
+    assert( "aaa"s >= "aa"s);
 
-    double real = 1.56;
-    std::cout << "Ejemplo del tipo de dato double: " << real << "\n";
-
-    std::string cadena = "Algoritmos y Estructura de datos";
-    std::cout << "Ejemplo del tipo de dato string: " << cadena << "\n";
-
-    bool booleano_false = false;
-    std::cout << "Ejemplo del tipo de dato bool false: " << booleano_false << "\n";
-
-    bool booleano_true = true;
-    std::cout << "Ejemplo del tipo de dato bool true: " << booleano_true << "\n";
+    //Pruebas del tipo de dato booleano
+    assert(true);
+    assert(!false);
+    assert(false != true);
+    assert(true == true);
+    assert(true or false);
 }
